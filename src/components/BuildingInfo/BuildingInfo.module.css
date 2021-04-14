@@ -1,0 +1,29 @@
+.BuildingInfo{
+    height: 82vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 1s;
+    transition-property: opacity;
+}
+
+.BuildingInfo > img{
+    width: 65vh;
+    max-width: 30vw;
+    height: 65vh;
+    max-height: 30vw;
+    position: relative;
+    top: -2vh;
+    left: 2vh;
+    opacity: 0.9;
+}
+
+.BuildingInfo > p{
+    position: relative;
+    opacity: 0.9;
+    width: 65vh;
+    max-width: 30vw;
+    text-align: center;
+}

@@ -1,0 +1,82 @@
+.Header{
+    display: flex;
+    align-items: center;
+    height: 7vh;
+    min-height: calc(0.07*var(--minHeight));
+    flex-wrap: wrap;
+}
+
+img.Profile{
+    width: 7vh;
+    min-width: calc(0.07*var(--minHeight));
+    height: 7vh;
+    min-height: calc(0.07*var(--minHeight));
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.ProfileLabel{
+    padding-left: 20px;
+    cursor: pointer;
+    margin-right: auto;
+}
+
+.ProfileName{
+    font-weight: 700;
+}
+
+.ProfileEmail{
+    font-size: var(--fontSizeSmall);
+    opacity: 0.9;
+}
+
+.Languages{
+    display: flex;
+    align-items: center;
+}
+
+.Lang,
+.LangOn{
+    margin-left: 10px;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.LangOnContainer{
+    position: relative;
+    top: -3px
+}
+
+.LangOn{
+    opacity: 1;
+    font-size: var(--fontSizeHuge);
+}
+
+.LangOn:before{
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    background-color: #fff;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.BeforeShowHeader{
+    opacity: 0;
+    transition: 3s;
+    transition-property: opacity;
+}
+
+.ActiveHeader{
+    opacity: 1;
+    transition: 1s;
+    transition-property: opacity;
+}
+
+.HomeRoute{
+    margin-right: 50px;
+    cursor: pointer;
+}

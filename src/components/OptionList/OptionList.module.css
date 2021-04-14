@@ -1,0 +1,188 @@
+.OptionList{
+    height: 82vh;
+    min-height: calc(0.82*var(--minHeight));
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.Option{
+    width: 35vh;
+    max-width: 18vw;
+    text-align: center;
+    position: relative;
+    left: 0;
+    right: 0;
+}
+
+.Option > img,
+.AwardedOption > img{
+    width: 30vh;
+    max-width: 16vw;
+    height: 30vh;
+    max-height: 16vw;
+    cursor: pointer;
+    border-radius: 50%;
+    opacity: 0.6;
+}
+
+.Option:hover > img{
+    width: 35vh;
+    max-width: 18vw;
+    height: 35vh;
+    max-height: 18vw;
+    opacity: 1;
+}
+
+.Option:hover > p{
+    font-size: var(--fontSizeHuge);
+    font-weight: 700;
+    opacity: 1;
+}
+
+@media only screen and (max-height: 600px) {
+    .Option{
+        width: calc(0.35*var(--minHeight));
+    }
+
+    .Option > img,
+    .AwardedOption > img{
+        width: calc(0.30*var(--minHeight));
+        height: calc(0.30*var(--minHeight));
+    }
+
+    .Option:hover > img{
+        width: calc(0.35*var(--minHeight));
+        height: calc(0.35*var(--minHeight));
+    }
+}
+
+.Option > p,
+.AwardedOption > p{
+    text-align: center;
+    opacity: 0.6;
+    cursor: pointer;
+    font-size: var(--fontSizeBig);
+    font-weight: 500;
+}
+
+.AwardedOption{
+    width: 75vh;
+    max-width: 36vw;
+    text-align: center;
+}
+
+.AwardedOption > img{
+    width: 65vh;
+    max-width: 30vw;
+    height: 65vh;
+    max-height: 30vw;
+    position: relative;
+    top: -4vh;
+    opacity: 0.9;
+}
+
+.AwardedOption:hover > img{
+    width: 75vh;
+    max-width: 36vw;
+    height: 75vh;
+    max-height: 36vw;
+    opacity: 1;
+}
+
+.AwardedOption > p{
+    position: relative;
+    top: -6vh;
+    opacity: 0.9;
+}
+
+.AwardedOption:hover > p{
+    font-size: var(--fontSizeHuge);
+    opacity: 1;
+    font-weight: 700;
+}
+
+@media only screen and (max-height: 600px) {
+    .AwardedOption{
+        width: calc(0.75*var(--minHeight));
+    }
+
+    .AwardedOption > img{
+        width: calc(0.65*var(--minHeight));
+        height:calc(0.65*var(--minHeight));
+        position: relative;
+        top: calc(-0.04*var(--minHeight));
+    }
+
+    .AwardedOption:hover > img{
+        width: calc(0.75*var(--minHeight));
+        height: calc(0.75*var(--minHeight));
+        opacity: 1;
+    }
+
+    .AwardedOption > p{
+        position: relative;
+        top: calc(-0.06*var(--minHeight));
+    }
+}
+
+.BeforeShowOptionList{
+    opacity: 0;
+}
+
+.ActiveShowOptionList{
+    opacity: 1;
+    transition: 1s;
+    transition-property: opacity;
+}
+
+.BeforeHideOptionList{
+    opacity: 0;
+    transition: 0.5s;
+    transition-property: opacity;
+}
+
+.BeforeHideOptionList > .OptionList > .Option:first-child{
+    position: relative;
+    left: -30vw;
+    transition: 0.5s;
+    transition-property: left;
+}
+
+.BeforeHideOptionList > .OptionList > .AwardedOption > img{
+    position: relative;
+    top: -70vh;
+    transition: 0.5s;
+    transition-property: top;
+}
+
+.BeforeHideOptionList > .OptionList > .AwardedOption > p{
+    position: relative;
+    top: 70vh;
+    transition: 0.5s;
+    transition-property: top;
+}
+
+.BeforeHideOptionList > .OptionList > .Option:last-child{
+    position: relative;
+    left: 30vw;
+    transition: 0.5s;
+    transition-property: left;
+}
+
+p.subtitle,
+.Option:hover > p.subtitle,
+.AwardedOption:hover > p.subtitle{
+    font-size: var(--fontSizeSmall);
+    margin-top: 2vh;
+    opacity: 0.4;
+}
+
+/*
+FUTURE:
+
+Strzałki lewo prawo do przewijania opcji dla list z większą liczbą elementów niż 3:
+- max left arrow container: 11vw;
+- max right arrow container: 11vw;
+ */

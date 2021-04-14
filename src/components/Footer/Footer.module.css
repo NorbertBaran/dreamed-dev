@@ -1,0 +1,21 @@
+p.Footer{
+    margin-top: auto;
+    font-size: var(--fontSizeSmall);
+    height: 5vh;
+    min-height: calc(0.05*var(--minHeight));
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.BeforeShowFooter{
+    opacity: 0;
+    transition: 3s;
+    transition-property: opacity;
+}
+
+.ActiveFooter{
+    opacity: 1;
+    transition: 1s;
+    transition-property: opacity;
+}
